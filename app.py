@@ -29,11 +29,12 @@ handler = WebhookHandler(os.getenv('CHANNEL_SECRET'))
 def GPT_response(text):
     # 接收回應
     # response = openai.Completion.create(model="gpt-3.5-turbo-instruct", prompt=text, temperature=0.5, max_tokens=500)
-    response = "Response:" + text
-    print(response)
     # 重組回應
-    answer = response['choices'][0]['text'].replace('。','')
-    return answer
+    # answer = response['choices'][0]['text'].replace('。','')
+    # print(response)
+    response = "Response:" + text
+    
+    return response
 
 
 # 監聽所有來自 /callback 的 Post Request
